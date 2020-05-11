@@ -12,5 +12,15 @@ reverseString("never") // returns "reven"
 
 
 function reverseString(str){
+  let resultString = ''
 
+  for(let i = str.length -1; i>=0; i--){
+      let letter = str[i]
+      resultString += letter
+
+  }
+
+  return resultString;
 }
+
+console.log(reverseString('MothersDay'))
