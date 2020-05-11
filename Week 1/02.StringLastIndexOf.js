@@ -5,8 +5,17 @@
 
 function stringLastIndexOf(str, char) {
 
+  for(let i = str.length -1; i > 0; i--){
+    let current = str[i]
+
+    if(current === char){
+      return i;
+    }
+  }
+
+  return -1;
 }
 
 // Examples:
-// stringLastIndexOf('awesome', 'e'); // 6
-// stringLastIndexOf('awesome', 'z'); // -1
+console.log(stringLastIndexOf('awesome', 'e')); // 6
+console.log(stringLastIndexOf('awesome', 'z')); // -1
