@@ -22,9 +22,31 @@
 
 var numJewelsInStones = function(J, S) {
 
+  let counter = 0;
+  let map = {};
+
+  for(let i =0; i < S.length; i++){
+    let currentStone = S[i];
+
+    if(map[currentStone] === undefined){
+      map[currentStone] =1
+    } else{
+      map[currentStone]++
+    }
+  }
 
 
+  for(let j = 0; j < J.length; j++){
+    let currentJewel = J[j]
+    console.log(`i am checking this jewel ${currentJewel}`)
+
+    if(map[currentJewel]){
+      counter += map[currentJewel]
+    }
+  }
 
 
-
+  return counter;
 };
+
+console.log(numJewelsInStones('aA','aAAbbbb' ))
