@@ -1,4 +1,3 @@
-// 8 kyu
 // Sum of positive
 
 // Instructions
@@ -12,7 +11,6 @@ function positiveSum(arr) {
 
 
 }
-
 
 console.log(positiveSum([1,2,3,4,5]),15);
 console.log(positiveSum([1,-2,3,4,5]),13);
