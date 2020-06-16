@@ -8,29 +8,9 @@
 
 let arrayProducts = (arr) => {
 
-  let result = [];
-  let numProduct;
-
-  let product = 1;
-  let count = 0;
-
-  while(arr.length > count){
-    product*= arr[count]
-    console.log(product)
-    count++
-  }
-
-  for(let i = 0; i < arr.length; i++ ){
-    numProduct = product / arr[i]
-    result.push(numProduct)
-    console.log(result);
-  }
-
-  return result;
 }
 
 
 arrayProducts([1, 2, 3, 4, 5]) // [120, 60, 40, 30, 24]
 arrayProducts([3, 2, 1]) // [120, 60, 40, 30, 24]
 
-// Follow-up: what if you can't use division?
