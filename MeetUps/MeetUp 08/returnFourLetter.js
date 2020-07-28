@@ -2,7 +2,7 @@
 
 let fourLetters = (arr) => {
 
-  //solution 1
+  //solution #1
   // let result = [];
   // let len = 4;
 
@@ -15,6 +15,13 @@ let fourLetters = (arr) => {
   // }
 
   // return result;
+
+  //solution #2
+  let filtered = arr.filter((word) => {
+    return word.length === 4;
+  })
+
+  return filtered;
 }
 
 console.log(fourLetters(['Tomato', 'Potato', 'Pair']))
