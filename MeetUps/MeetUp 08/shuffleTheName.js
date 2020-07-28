@@ -3,7 +3,25 @@
 
 let shuffleName = (string) => {
 
+  //solution 1
+  // let splitted = string.split(' ')
+
+  // let result = ''
+
+  // result+= splitted[1] + ' ' + splitted[0];
+
+  // return result;
+
+
+  //solution 2
+  let splitted = string.split(' ')
+  let reversed = splitted.reverse()
+  let joined = reversed.join(' ')
+
+  return joined;
 
 }
 
 console.log(shuffleName('Alex Avila'))
+console.log(shuffleName("Rosie O'Donell"))
+console.log(shuffleName('Seymour Butts'))
