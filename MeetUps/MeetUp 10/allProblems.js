@@ -24,23 +24,23 @@ Output: edoC evoL I
 
 const firstReverse = function (string){
   // solution #1
-//  let result = '';
-//   // show them the error with undefined - len
-//   for(let i = string.length -1; i >= 0; i--){
-//     let letter = string[i];
-//     result+= letter;
-//   }
-//   return result;
+ let result = '';
+  // show them the error with undefined - len
+  for(let i = string.length -1; i >= 0; i--){
+    let letter = string[i];
+    result+= letter;
+  }
+  return result;
 
   // solution #2 - simple and clean
-  let finalResult = string.split('').reverse().join('')
+  // let finalResult = string.split('').reverse().join('')
 
-  return finalResult;
+  // return finalResult;
 }
 
-console.log(firstReverse('javascript'))
-console.log(firstReverse('pretty awesome class'))
-console.log(firstReverse('thank you for coming'))
+// console.log(firstReverse('javascript'))
+// console.log(firstReverse('pretty awesome class'))
+// console.log(firstReverse('thank you for coming'))
 
 
 
@@ -63,6 +63,22 @@ Output: 24
 Input: 8
 Output: 40320
 */
+
+const firstFactorial = function(num){
+  var result =1;
+  var i = 1;
+
+  while(i <= num){
+    result*=i
+    i++
+  }
+
+  return result
+}
+console.log(firstFactorial(5))
+console.log(firstFactorial(4))
+console.log(firstFactorial(3))
+
 
 /*
  _                                 _    __          __           _
