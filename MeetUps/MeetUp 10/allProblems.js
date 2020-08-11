@@ -75,9 +75,9 @@ const firstFactorial = function(num){
 
   return result
 }
-console.log(firstFactorial(5))
-console.log(firstFactorial(4))
-console.log(firstFactorial(3))
+// console.log(firstFactorial(5))
+// console.log(firstFactorial(4))
+// console.log(firstFactorial(3))
 
 
 /*
@@ -100,6 +100,36 @@ Output: time
 Input: "I love dogs"
 Output: love
 */
+
+const longestWord = function(sentence){
+
+  var words = sentence.split(' ')
+  var longest = words[0]
+
+  for(let word of words){
+    if(word.length > longest.length){
+      longest = word
+      // console.log(longest)
+    }
+      // do not need to have this learning purposes
+    // else{
+    //   console.log('not it keep trying')
+    // }
+
+  }
+
+  return longest
+}
+
+console.log(longestWord('What is the longest word'))
+console.log(longestWord('This class is not that fun today'))
+console.log(longestWord('JK this class is awesome'))
+
+
+
+
+
+
 
 /*
  _          _   _               _____            _ _        _ _
