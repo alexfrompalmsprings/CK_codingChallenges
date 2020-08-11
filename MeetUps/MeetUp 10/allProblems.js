@@ -22,6 +22,28 @@ Output: edoC evoL I
 
 */
 
+const firstReverse = function (string){
+  // solution #1
+ let result = '';
+  // show them the error with undefined - len
+  for(let i = string.length -1; i >= 0; i--){
+    let letter = string[i];
+    result+= letter;
+  }
+  return result;
+
+
+
+
+}
+
+console.log(firstReverse('javascript'))
+console.log(firstReverse('pretty awesome class'))
+console.log(firstReverse('thank you for coming'))
+
+
+
+
 
 /*
  ______ _          _     ______         _             _       _
