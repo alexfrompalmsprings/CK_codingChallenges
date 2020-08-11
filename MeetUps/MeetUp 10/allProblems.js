@@ -24,17 +24,18 @@ Output: edoC evoL I
 
 const firstReverse = function (string){
   // solution #1
- let result = '';
-  // show them the error with undefined - len
-  for(let i = string.length -1; i >= 0; i--){
-    let letter = string[i];
-    result+= letter;
-  }
-  return result;
+//  let result = '';
+//   // show them the error with undefined - len
+//   for(let i = string.length -1; i >= 0; i--){
+//     let letter = string[i];
+//     result+= letter;
+//   }
+//   return result;
 
+  // solution #2 - simple and clean
+  let finalResult = string.split('').reverse().join('')
 
-
-
+  return finalResult;
 }
 
 console.log(firstReverse('javascript'))
