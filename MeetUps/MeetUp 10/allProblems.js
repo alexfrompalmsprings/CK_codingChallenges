@@ -22,13 +22,13 @@ Output: edoC evoL I
 
 */
 
-const firstReverse = function (string){
+const firstReverse = function (string) {
   // solution #1
- let result = '';
+  let result = '';
   // show them the error with undefined - len
-  for(let i = string.length -1; i >= 0; i--){
+  for (let i = string.length - 1; i >= 0; i--) {
     let letter = string[i];
-    result+= letter;
+    result += letter;
   }
   return result;
 
@@ -64,12 +64,12 @@ Input: 8
 Output: 40320
 */
 
-const firstFactorial = function(num){
-  var result =1;
+const firstFactorial = function (num) {
+  var result = 1;
   var i = 1;
 
-  while(i <= num){
-    result*=i
+  while (i <= num) {
+    result *= i
     i++
   }
 
@@ -101,17 +101,17 @@ Input: "I love dogs"
 Output: love
 */
 
-const longestWord = function(sentence){
+const longestWord = function (sentence) {
 
   var words = sentence.split(' ')
   var longest = words[0]
 
-  for(let word of words){
-    if(word.length > longest.length){
+  for (let word of words) {
+    if (word.length > longest.length) {
       longest = word
       // console.log(longest)
     }
-      // do not need to have this learning purposes
+    // do not need to have this learning purposes
     // else{
     //   console.log('not it keep trying')
     // }
@@ -121,14 +121,45 @@ const longestWord = function(sentence){
   return longest
 }
 
-console.log(longestWord('What is the longest word'))
-console.log(longestWord('This class is not that fun today'))
-console.log(longestWord('JK this class is awesome'))
+// console.log(longestWord('What is the longest word'))
+// console.log(longestWord('This class is not that fun today'))
+// console.log(longestWord('JK this class is awesome'))
 
 
 
 
+function fizzbuzz(n) {
+  // we will store the resulting numbers within an array
+  var result = [];
 
+  // loop from 1 to n
+  for (let i = 1; i <= n; i++) {
+    let add = '';
+    // check if there is a remainder when dividing by 3, if not
+    // then we know this number is divisible by 3
+    if (i % 3 === 0) {
+      add += 'Fizz';
+    }
+    // check if divisible by 5
+    if (i % 5 === 0) {
+      add += 'Buzz';
+    }
+    // not divisible by either 3 or 5
+    if (add === '') {
+      result.push(i);
+    } else {
+      result.push(add);
+    }
+  }
+
+  return result;
+}
+
+
+console.log(fizzbuzz(1))
+console.log(fizzbuzz(5))
+console.log(fizzbuzz(3))
+console.log(fizzbuzz(15))
 
 
 /*
@@ -147,9 +178,30 @@ being passed and capitalize the first letter of each word.
 Words will be separated by only one space.
 */
 
+const letterCapitalize = function (sentence) {
+
+  // var words = sentence.split(" ");
+
+  // for (var i = 0; i < words.length; i++) {
+  //   let word = words[i]
+
+  //   word = word.charAt(0).toUpperCase() + word.slice(1);
+  // }
+
+  // return words.join(" ");
 
 
 
+  var arr = sentence.split(" ");
+  for (var i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+  }
 
+  return arr.join(" ");
 
+}
 
+// console.log(letterCapitalize('we need to have capitals'))
+// console.log(letterCapitalize('in the first letter of'))
+// console.log(letterCapitalize('each word to get this horrible'))
+// console.log(letterCapitalize('problem completed'))
