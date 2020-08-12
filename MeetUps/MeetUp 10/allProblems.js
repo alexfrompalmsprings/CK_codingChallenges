@@ -126,7 +126,28 @@ const longestWord = function (sentence) {
 // console.log(longestWord('JK this class is awesome'))
 
 
+/*
+ ______ _         ____
+|  ____(_)       |  _ \
+| |__   _ _______| |_) |_   _ ________
+|  __| | |_  /_  /  _ <| | | |_  /_  /
+| |    | |/ / / /| |_) | |_| |/ / / /
+|_|    |_/___/___|____/ \__,_/___/___|
 
+Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
+So	your	program	should	output:
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+.
+.
+.
+
+*/
 
 function fizzbuzz(n) {
   // we will store the resulting numbers within an array
@@ -144,6 +165,7 @@ function fizzbuzz(n) {
     if (i % 5 === 0) {
       add += 'Buzz';
     }
+
     // not divisible by either 3 or 5
     if (add === '') {
       result.push(i);
