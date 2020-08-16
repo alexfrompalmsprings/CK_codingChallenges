@@ -94,6 +94,36 @@ If no occurrences can be found, a count of 0 should be returned.
 */
 
 function strCount(str, letter) {
+    //! solution less advanced
+  // let occurrences = 0;
+
+  // for(let i = 0; i < str.length; i++ ){
+  //   let current = str[i];
+
+  //   if(current === letter){
+  //     occurrences++;
+  //   }
+  // }
+
+  // return occurrences;
+
+  //! solution more advanced version
+  let letters = str.split('');
+
+  let map = {};
+
+
+  for (let i = 0; i < letters.length; i++) {
+    let current = letters[i];
+
+    if (map[current] === undefined) {
+      map[current] = 1;
+    } else {
+      map[current]++;
+    }
+  }
+
+  return map[letter] === undefined ? 0: map[letter];
 
 
 }
