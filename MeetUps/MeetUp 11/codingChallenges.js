@@ -53,6 +53,32 @@ Sum all the numbers of the array except the highest and the lowest element (the 
 
 function sumArray(array) {
 
+  //! solution #1
+  //edge case
+  // if(array === null ){
+  //   return 0
+  // }
+
+  // var sum = 0;
+  // var ordered = array.sort((a,b) => a -b)
+
+  // for(let i = 1; i < ordered.length - 1; i++){
+  //   sum+= ordered[i]
+  // }
+
+  // return sum;
+
+  //! solution #2
+  var max = Math.max.apply(Math, array);
+  var min = Math.min.apply(Math, array);
+  var sum = 0
+
+  for (i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+
+  return sum - max - min
+
 
 
 }
