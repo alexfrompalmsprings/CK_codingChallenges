@@ -52,6 +52,20 @@ Sum all the numbers of the array except the highest and the lowest element (the 
 */
 
 function sumArray(array) {
+  let diff;
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    let first = arr[i]
+    let second = arr[i + 1];
+
+    diff = second - first;
+
+    if (diff !== 1) {
+      return second
+    }
+
+  }
+  return null;
 
 
 }
