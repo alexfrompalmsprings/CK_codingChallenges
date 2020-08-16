@@ -11,7 +11,20 @@ Given a string of digits, you should replace any digit below 5 with '0' and any 
 */
 
 function fakeBin(string) {
+  let result = '';
+  let nums = x.split('');
 
+  nums.forEach((num) => {
+    let number = Number(num);
+
+    if (number < 5) {
+      result += '0'
+    } else {
+      result += '1'
+    }
+  })
+
+  return result;
 
 }
 
