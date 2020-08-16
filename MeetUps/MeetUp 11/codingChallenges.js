@@ -35,7 +35,22 @@ For example:
 function DNAtoRNA(dna) {
   // create a function which returns an RNA sequence from the given DNA sequence
 
+  let letters = dna.split('');
+  let RNA = []
+
+  for (let i = 0; i < letters.length; i++) {
+    let letter = letters[i]
+
+    if (letter === 'T') {
+      RNA.push('U')
+    } else {
+      RNA.push(letter)
+    }
+  }
+
+  return RNA.join('');
 }
+// console.log(DNAtoRNA("TTTT"));
 
 
 /*  _____                            __  __          __   __      __  __ _____ _   _
