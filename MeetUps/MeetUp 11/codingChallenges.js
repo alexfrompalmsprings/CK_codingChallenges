@@ -77,3 +77,24 @@ If the whole array is consecutive then return null2.
 function firstNonConsecutive(arr) {
 
 }
+
+
+/*
+  _____ _        _                _____                  _
+ / ____| |      (_)              / ____|                | |
+| (___ | |_ _ __ _ _ __   __ _  | |     ___  _   _ _ __ | |_
+ \___ \| __| '__| | '_ \ / _` | | |    / _ \| | | | '_ \| __|
+ ____) | |_| |  | | | | | (_| | | |___| (_) | |_| | | | | |_
+|_____/ \__|_|  |_|_| |_|\__, |  \_____\___/ \__,_|_| |_|\__|
+                          __/ |
+                         |___/
+
+Create a function called that accepts 2 string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+If no occurrences can be found, a count of 0 should be returned.
+*/
+
+function strCount(str, letter) {
+
+
+}
+console.log(strCount('Hello', 'l'));
