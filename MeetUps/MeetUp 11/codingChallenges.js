@@ -56,3 +56,24 @@ function sumArray(array) {
 
 }
 console.log(sumArray([ 6, 2, 1, 8, 10 ]))
+
+
+/*
+ __     _     _   _              _____                                _   _
+/_ |   | |   | \ | |            / ____|                              | | (_)
+ | |___| |_  |  \| | ___  _ __ | |     ___  _ __  ___  ___  ___ _   _| |_ ___   _____
+ | / __| __| | . ` |/ _ \| '_ \| |    / _ \| '_ \/ __|/ _ \/ __| | | | __| \ \ / / _ \
+ | \__ \ |_  | |\  | (_) | | | | |___| (_) | | | \__ \  __/ (__| |_| | |_| |\ V /  __/
+ |_|___/\__| |_| \_|\___/|_| |_|\_____\___/|_| |_|___/\___|\___|\__,_|\__|_| \_/ \___|
+
+
+Your task is to find the first element of an array that is not consecutive.
+By not consecutive we mean not exactly 1 larger than the previous element of the array.
+E.g. If we have an array [1,2,3,4,6,7,8] then 1 then 2 then 3 then 4 are all consecutive but 6 is not, so that's the first non-consecutive number.
+If the whole array is consecutive then return null2.
+*/
+
+
+function firstNonConsecutive(arr) {
+
+}
