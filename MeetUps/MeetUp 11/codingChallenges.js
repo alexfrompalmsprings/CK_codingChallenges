@@ -10,7 +10,7 @@
 Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
 */
 
-function fakeBin(string){
+function fakeBin(string) {
 
 
 }
@@ -52,24 +52,11 @@ Sum all the numbers of the array except the highest and the lowest element (the 
 */
 
 function sumArray(array) {
-  let diff;
 
-  for (let i = 0; i < arr.length - 1; i++) {
-    let first = arr[i]
-    let second = arr[i + 1];
-
-    diff = second - first;
-
-    if (diff !== 1) {
-      return second
-    }
-
-  }
-  return null;
 
 
 }
-console.log(sumArray([ 6, 2, 1, 8, 10 ]))
+console.log(sumArray([6, 2, 1, 8, 10]))
 
 
 /*
@@ -89,6 +76,20 @@ If the whole array is consecutive then return null2.
 
 
 function firstNonConsecutive(arr) {
+  let diff;
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    let first = arr[i]
+    let second = arr[i + 1];
+
+    diff = second - first;
+
+    if (diff !== 1) {
+      return second
+    }
+
+  }
+  return null;
 
 }
 
@@ -108,7 +109,7 @@ If no occurrences can be found, a count of 0 should be returned.
 */
 
 function strCount(str, letter) {
-    //! solution less advanced
+  //! solution less advanced
   // let occurrences = 0;
 
   // for(let i = 0; i < str.length; i++ ){
@@ -137,7 +138,7 @@ function strCount(str, letter) {
     }
   }
 
-  return map[letter] === undefined ? 0: map[letter];
+  return map[letter] === undefined ? 0 : map[letter];
 
 
 }
