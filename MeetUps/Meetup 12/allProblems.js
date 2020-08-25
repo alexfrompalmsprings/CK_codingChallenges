@@ -51,3 +51,52 @@ _      _   _                     _
 */
 
 
+
+// queestion 1
+/*
+Create function that is able to take a number and console.log the pattern below.
+
+*
+**
+***
+****
+*****
+******
+
+*/
+
+const patternPrinter = function(n){
+  let res = '';
+
+  for(let i = 0; i <= n; i++ ){
+    res+= '*'
+    console.log(res)
+  }
+}
+
+
+
+// 5.  company has a list of employees and their salary in separate arrays. You are tasked
+// with the job of printing out the name of each employee and the employee’s salary
+// as a string in the format: 'Employee name: Employee salary:'
+
+const namePrinter = function(emps, sal){
+
+  let run;
+  if(emps.length === sal.length){
+    run = true;
+  } else{
+    console.log('Error: Please check the information is correct')
+  }
+
+  if(run){
+    for(let i = 0; i < emps.length; i++){
+      console.log(`${emps[i]}: ${sal[i]}`)
+    }
+  }
+
+
+ }
+
+ let employees = ['Lara', 'Sukhi', 'Evee', 'Simi','Beno','Jay'];
+ let employeeSalary = [1000, 1300, 957.89, 3230.14, 750, 13900];
