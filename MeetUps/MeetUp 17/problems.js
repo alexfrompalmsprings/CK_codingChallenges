@@ -1,3 +1,5 @@
+// problems replit ➡️ https://repl.it/@alexisaviles/StrikingRecursiveExponent#index.js
+
 /*
                                                _
                                               | |
@@ -42,7 +44,7 @@ _ __ ___   __ _ _ __
                 |_|
 */
 
-function addANum(arr, num){
+function addANum(arr, num) {
 
   // var arr = [1, 2, 3, 4];
   // var plus5 = [];
@@ -52,13 +54,13 @@ function addANum(arr, num){
 
   // using map
   let mapped = arr.map((int) => {
-    return int+ num;
+    return int + num;
   })
 
   return mapped;
 }
 
-let plus10 = [6,7,8,9]
+let plus10 = [6, 7, 8, 9]
 console.log(addANum(plus10, 10))
 
 
@@ -69,13 +71,13 @@ console.log(addANum(plus10, 10))
 
 
 /*
-  __ _ _ _
- / _(_) | |
+__ _ _ _
+/ _(_) | |
 | |_ _| | |_ ___ _ __
 |  _| | | __/ _ \ '__|
 | | | | | ||  __/ |
 |_| |_|_|\__\___|_|
- */
+*/
 
 
 // Write a function called "filterEvenLengthWords".
@@ -99,3 +101,47 @@ function filterEvenLengthWords(arr) {
 
 }
 // console.log(filterEvenLengthWords(['One', 'Two', 'Three', 'Four', 'Alex']));
+
+
+/*
+              _
+             | |
+ _ __ ___  __| |_   _  ___ ___
+| '__/ _ \/ _` | | | |/ __/ _ \
+| | |  __/ (_| | |_| | (_|  __/
+|_|  \___|\__,_|\__,_|\___\___|
+
+*/
+// Make the sum() function return the sum of the values in the passed in array. Your solution must use the reduce() function of the built-in javascript Array object. If you're not familiar with reduce(), reading over the documentation may help.
+
+// function sum(array) {
+//   // Use array.reduce() to find and return the
+//   // sum of the values in array.
+// }
+// For example:
+
+// var someNumbers = [1,2,3,4,5,6,7,8,9,10];
+
+// sum(someNumbers); // should return 55
+
+function addition(arr){
+
+  let sum = 0;
+  for(num of arr){
+    sum += num;
+  }
+  return sum;
+
+}
+let arrSum = [1,2,3,4];
+console.log(addition(arrSum))
+
+
+let additionReduce = arrSum.reduce((num, total) => {
+  return num + total;
+},0)
+
+console.log(additionReduce);
+
+
+
