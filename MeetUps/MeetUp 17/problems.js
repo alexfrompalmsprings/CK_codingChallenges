@@ -30,7 +30,43 @@ function eachFunc(arr) {
   })
   return lengths;
 }
-console.log(eachFunc(['One', 'Two', 'Three', 'Four', 'Alex']));
+// console.log(eachFunc(['One', 'Two', 'Three', 'Four', 'Alex']));
+
+
+/*
+_ __ ___   __ _ _ __
+| '_ ` _ \ / _` | '_ \
+| | | | | | (_| | |_) |
+|_| |_| |_|\__,_| .__/
+                | |
+                |_|
+*/
+
+function addANum(arr, num){
+
+  // var arr = [1, 2, 3, 4];
+  // var plus5 = [];
+  // for(var i = 0; i < arr.length; i++) {
+  //     plus5[i] = arr[i] + 5;
+  // }
+
+  // using map
+  let mapped = arr.map((int) => {
+    return int+ num;
+  })
+
+  return mapped;
+}
+
+let plus10 = [6,7,8,9]
+console.log(addANum(plus10, 10))
+
+
+
+
+
+
+
 
 /*
   __ _ _ _
