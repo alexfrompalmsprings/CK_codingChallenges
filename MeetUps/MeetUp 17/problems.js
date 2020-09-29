@@ -10,6 +10,27 @@
 */
 
 
+/*
+__           ______           _
+/ _|         |  ____|         | |
+| |_ ___  _ __| |__   __ _  ___| |__
+|  _/ _ \| '__|  __| / _` |/ __| '_ \
+| || (_) | |  | |___| (_| | (__| | | |
+  |_| \___/|_|  |______\__,_|\___|_| |_|
+
+  */
+
+// create a function that returns the length of each word
+
+function eachFunc(arr) {
+
+  let lengths = [];
+  arr.forEach((word) => {
+    lengths.push(word.length);
+  })
+  return lengths;
+}
+console.log(eachFunc(['One', 'Two', 'Three', 'Four', 'Alex']));
 
 /*
   __ _ _ _
@@ -21,7 +42,6 @@
  */
 
 
-
 // Write a function called "filterEvenLengthWords".
 // Given an array of strings, "filterEvenLengthWords" returns an array containing only the elements of the given array whose length is an even number.
 
@@ -29,9 +49,8 @@ function evenFinder(word) {
   return word.length % 2 === 0 ? true : false;
 }
 
-console.log(evenFinder('alex'));
-console.log(evenFinder('alexa'));
-
+// console.log(evenFinder('alex'));
+// console.log(evenFinder('alexa'));
 
 
 function filterEvenLengthWords(arr) {
@@ -43,9 +62,4 @@ function filterEvenLengthWords(arr) {
   return filtered;
 
 }
-console.log(filterEvenLengthWords(['One', 'Two', 'Three', 'Four', 'Alex']));
-
-
-
-
-// var output = filterEvenLengthWords(['word', 'words', 'word', 'words']);
+// console.log(filterEvenLengthWords(['One', 'Two', 'Three', 'Four', 'Alex']));
