@@ -81,18 +81,15 @@ function averagePairLoop(arr, target) {
 
       avg = (one + two) / 2
 
-      if(avg === target){
+      if (avg === target) {
         return [one, two]
       }
     }
   }
 
-
-
-
 }
 // console.log(averagePairLoop([1, 2, 3], 2.5)) // true
-console.log(averagePairLoop([1, 3, 3, 5, 6, 7, 10, 12, 19], 8)) //true
+// console.log(averagePairLoop([1, 3, 3, 5, 6, 7, 10, 12, 19], 8)) //true
 // console.log(averagePairLoop([-1, 0, 3, 4, 5, 6], 4.1)) // false
 // console.log(averagePairLoop([], 4)) //false
 
@@ -107,8 +104,27 @@ console.log(averagePairLoop([1, 3, 3, 5, 6, 7, 10, 12, 19], 8)) //true
 
 function averagePair(arr, target) {
 
+  let small = 0;
+  let big = arr.length - 1;
+  let avg;
+
+  while (arr[big] > arr[small]) {
+    avg = (arr[big] + arr[small]) / 2;
+    // console.log(avg);
+
+    if (avg === target) {
+      return [arr[big], arr[small]]
+    } else if (avg > target) {
+      big--
+    } else {
+      small++
+    }
+  }
+
+  return null
+
 }
 // console.log(averagePair([1, 2, 3], 2.5)) // true
-// console.log(averagePair([1, 3, 3, 5, 6, 7, 10, 12, 19], 8)) //true
+console.log(averagePair([1, 3, 3, 5, 6, 7, 10, 12, 19], 8)) //true
 // console.log(averagePair([-1, 0, 3, 4, 5, 6], 4.1))
 // console.log(averagePair([], 4))
