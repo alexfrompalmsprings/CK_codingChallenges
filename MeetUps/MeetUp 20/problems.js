@@ -3,9 +3,20 @@
 
 function wordsCombo(str1, str2) {
 
-}
+  for(let i = 0; i < str2.length; i++){
+    let letter = str2[i];
+    console.log(letter);
 
-// console.log(wordsCombo('anagram', 'anna'))
+    if(!(str1.includes(letter))){
+      console.log(`this letter is not in the first word`)
+      return false;
+    }
+
+  }
+  return true;
+}
+// console.log(wordsCombo('anagram', 'gram'))
+console.log(wordsCombo('anagram', 'grams'))
 // console.log(wordsCombo('cinema', 'iceman'))
 // console.log(wordsCombo('cinema', 'ireman'))
 
@@ -38,10 +49,10 @@ function anagramHash(arr1, arr2) {
 function averagePairLoop(arr, target) {
 
 }
-console.log(averagePairLoop([1, 2, 3], 2.5)) // true
-console.log(averagePairLoop([1, 3, 3, 5, 6, 7, 10, 12, 19], 8)) //true
-console.log(averagePairLoop([-1, 0, 3, 4, 5, 6], 4.1)) // false
-console.log(averagePairLoop([], 4)) //false
+// console.log(averagePairLoop([1, 2, 3], 2.5)) // true
+// console.log(averagePairLoop([1, 3, 3, 5, 6, 7, 10, 12, 19], 8)) //true
+// console.log(averagePairLoop([-1, 0, 3, 4, 5, 6], 4.1)) // false
+// console.log(averagePairLoop([], 4)) //false
 
 
 
