@@ -39,7 +39,7 @@ function freqCounter(arr) {
   return obj;
 }
 
-console.log(freqCounter([2, 2, 2, 4, 4, 4, 5, 5, 5, 10]))
+// console.log(freqCounter([2, 2, 2, 4, 4, 4, 5, 5, 5, 10]))
 
 
 function anagramHash(str1, str2) {
@@ -58,7 +58,7 @@ function anagramHash(str1, str2) {
   return true;
 }
 
-console.log(anagramHash('anagram', 'hana'))
+// console.log(anagramHash('anagram', 'hana'))
 // console.log(anagramHash('cinema', 'iceman'))
 
 
@@ -70,9 +70,29 @@ console.log(anagramHash('anagram', 'hana'))
 
 function averagePairLoop(arr, target) {
 
+  let avg;
+
+  for (let i = 0; i < arr.length; i++) {
+    let one = arr[i];
+
+    for (let j = i; j < arr.length; j++) {
+      let two = arr[j];
+      // console.log(one, two)
+
+      avg = (one + two) / 2
+
+      if(avg === target){
+        return [one, two]
+      }
+    }
+  }
+
+
+
+
 }
 // console.log(averagePairLoop([1, 2, 3], 2.5)) // true
-// console.log(averagePairLoop([1, 3, 3, 5, 6, 7, 10, 12, 19], 8)) //true
+console.log(averagePairLoop([1, 3, 3, 5, 6, 7, 10, 12, 19], 8)) //true
 // console.log(averagePairLoop([-1, 0, 3, 4, 5, 6], 4.1)) // false
 // console.log(averagePairLoop([], 4)) //false
 
