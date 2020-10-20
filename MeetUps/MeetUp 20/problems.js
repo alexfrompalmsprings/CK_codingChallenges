@@ -3,11 +3,11 @@
 
 function wordsCombo(str1, str2) {
 
-  for(let i = 0; i < str2.length; i++){
+  for (let i = 0; i < str2.length; i++) {
     let letter = str2[i];
     console.log(letter);
 
-    if(!(str1.includes(letter))){
+    if (!(str1.includes(letter))) {
       console.log(`this letter is not in the first word`)
       return false;
     }
@@ -16,7 +16,7 @@ function wordsCombo(str1, str2) {
   return true;
 }
 // console.log(wordsCombo('anagram', 'gram'))
-console.log(wordsCombo('anagram', 'grams'))
+// console.log(wordsCombo('anagram', 'grams'))
 // console.log(wordsCombo('cinema', 'iceman'))
 // console.log(wordsCombo('cinema', 'ireman'))
 
@@ -26,17 +26,39 @@ console.log(wordsCombo('anagram', 'grams'))
 // Given two strings, write a function to determine if strings 2 can be created with the letters of the string 1. Make sure you
 
 function freqCounter(arr) {
+  let obj = {};
 
+  for (let item of arr) {
+    if (obj[item] === undefined) {
+      obj[item] = 1;
+    } else {
+      obj[item]++
+    }
+  }
+
+  return obj;
 }
 
-// console.log(freqCounter([2,2,2,4,4,4,5,5,5,10]))
+console.log(freqCounter([2, 2, 2, 4, 4, 4, 5, 5, 5, 10]))
 
 
-function anagramHash(arr1, arr2) {
+function anagramHash(str1, str2) {
 
+  let oneCounter = freqCounter(str1)
+  let twoCounter = freqCounter(str2)
+
+  for (letter of str2) {
+    // break one at time
+    if ((oneCounter[letter] < twoCounter[letter]) || (oneCounter[letter] === undefined)) {
+      console.log(oneCounter[letter]);
+      return false;
+    }
+  }
+
+  return true;
 }
 
-// console.log(anagramHash('anagram', 'xanna'))
+console.log(anagramHash('anagram', 'hana'))
 // console.log(anagramHash('cinema', 'iceman'))
 
 
