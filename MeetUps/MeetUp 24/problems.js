@@ -136,13 +136,69 @@ console.log(totalPointsWeek11);
 
 
 
-
-
-
-
 // _            _                 ___                           _   _
 // _ __ ___  __| |_   _  ___(_)_ __   __ _    / _ \_ __ ___  _ __   ___ _ __| |_(_) ___  ___
 // | '__/ _ \/ _` | | | |/ __| | '_ \ / _` |  / /_)/ '__/ _ \| '_ \ / _ \ '__| __| |/ _ \/ __|
 // | | |  __/ (_| | |_| | (__| | | | | (_| | / ___/| | | (_) | |_) |  __/ |  | |_| |  __/\__ \
 // |_|  \___|\__,_|\__,_|\___|_|_| |_|\__, | \/    |_|  \___/| .__/ \___|_|   \__|_|\___||___/
 //                                   |___/                  |_|
+
+// create a function that tell us how many people are available for a meeting at our company
+
+
+let softwareEngineersInfo = [{
+    name: 'alex',
+    location: 'CA',
+    system: 'mac',
+    availability: 'Available'
+  },
+  {
+    name: 'katie',
+    location: 'WA',
+    system: 'mac',
+    availability: 'Available'
+  },
+  {
+    name: 'nas',
+    location: 'CA',
+    system: 'windows',
+    availability: 'Available'
+  },
+  {
+    name: 'drew',
+    location: 'DC',
+    system: 'windows',
+    availability: 'Not Available'
+  },
+  {
+    name: 'kelly',
+    location: 'CA',
+    system: 'CA',
+    availability: 'Available'
+  },
+  {
+    name: 'john',
+    location: 'NY',
+    system: 'windows',
+    availability: 'Not Available'
+  },
+
+];
+
+let availableSEs = softwareEngineersInfo.reduce(function (output, engineer) {
+
+  if (engineer.availability === 'Not Available') {
+    output.notAttending++;
+  }
+
+  if (engineer.availability === 'Available') {
+    output.attending++;
+  }
+
+  return output;
+}, {
+  notAttending: 0,
+  attending: 0
+});
+
+console.log(availableSEs);
