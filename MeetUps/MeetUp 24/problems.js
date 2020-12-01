@@ -38,6 +38,8 @@ console.log(reduceSum);
 // \___/|_.__// |\___|\___|\__|___/ \/ \_/\___|\__,_|\__,_|\___\___|
 //         |__/
 
+// return all the names of the students into an array.
+
 let studentsInfo = [{
     name: 'alex',
     location: 'CA',
@@ -80,3 +82,67 @@ let namesReduce = studentsInfo.reduce(function (namesArr, student) {
 }, []);
 
 console.log(namesReduce);
+
+
+// __             _                      ___      _       _
+// / _| __ _ _ __ | |_ __ _ ___ _   _    / _ \___ (_)_ __ | |_ ___
+// | |_ / _` | '_ \| __/ _` / __| | | |  / /_)/ _ \| | '_ \| __/ __|
+// |  _| (_| | | | | || (_| \__ \ |_| | / ___/ (_) | | | | | |_\__ \
+// |_|  \__,_|_| |_|\__\__,_|___/\__, | \/    \___/|_|_| |_|\__|___/
+//                              |___/
+
+// return the total amount of points of Alex's fantasy team during week 11
+let alexsTeam = [{
+    player: 'Kennan Allen',
+    position: 'WR',
+    points: 35,
+    team: 'Chargers'
+  },
+  {
+    player: 'Kyler Murray',
+    position: 'QB',
+    points: 20,
+    team: 'Cardinals'
+  },
+  {
+    player: 'Alvin Kamara',
+    position: 'RB',
+    points: 11,
+    team: 'Saints'
+  },
+  {
+    player: 'Gronk',
+    position: 'TE',
+    points: 5,
+    team: 'Tampa'
+  },
+  {
+    player: 'Steelers',
+    position: 'D',
+    points: 16,
+    team: 'Steelers'
+  },
+];
+
+let totalPointsSinceWeekOne = 850;
+
+let totalPointsWeek11 = alexsTeam.reduce(function (total, activePlayer) {
+  return total + activePlayer.points;
+}, 0); // totalPointsSinceWeekOne
+
+console.log(totalPointsWeek11);
+
+
+
+
+
+
+
+
+
+// _            _                 ___                           _   _
+// _ __ ___  __| |_   _  ___(_)_ __   __ _    / _ \_ __ ___  _ __   ___ _ __| |_(_) ___  ___
+// | '__/ _ \/ _` | | | |/ __| | '_ \ / _` |  / /_)/ '__/ _ \| '_ \ / _ \ '__| __| |/ _ \/ __|
+// | | |  __/ (_| | |_| | (__| | | | | (_| | / ___/| | | (_) | |_) |  __/ |  | |_| |  __/\__ \
+// |_|  \___|\__,_|\__,_|\___|_|_| |_|\__, | \/    |_|  \___/| .__/ \___|_|   \__|_|\___||___/
+//                                   |___/                  |_|
