@@ -144,8 +144,6 @@ console.log(totalPointsWeek11);
 //                                   |___/                  |_|
 
 // create a function that tell us how many people are available for a meeting at our company
-
-
 let softwareEngineersInfo = [{
     name: 'alex',
     location: 'CA',
@@ -202,3 +200,41 @@ let availableSEs = softwareEngineersInfo.reduce(function (output, engineer) {
 });
 
 console.log(availableSEs);
+
+
+
+// _       _        _____       _                  _                   ____                 _   _
+// (_) ___ | |__     \_   \_ __ | |_ ___ _ ____   _(_) _____      __   /___ \_   _  ___  ___| |_(_) ___  _ __
+// | |/ _ \| '_ \     / /\/ '_ \| __/ _ \ '__\ \ / / |/ _ \ \ /\ / /  //  / / | | |/ _ \/ __| __| |/ _ \| '_ \
+// | | (_) | |_) | /\/ /_ | | | | ||  __/ |   \ V /| |  __/\ V  V /  / \_/ /| |_| |  __/\__ \ |_| | (_) | | | |
+// _/ |\___/|_.__/  \____/ |_| |_|\__\___|_|    \_/ |_|\___| \_/\_/   \___,_\ \__,_|\___||___/\__|_|\___/|_| |_|
+// |__/
+
+// create a function that returns if the true/false if the parentheses are balanced
+
+function balancedParentheses(string) {
+  let characters = string.split('')
+
+  let checker = characters.reduce(function (counter, char) {
+    if (counter < 0) {
+      return counter;
+    }
+
+    if (char === '(') {
+      counter++;
+    }
+
+    if (char === ')') {
+      counter--;
+    }
+
+    return counter;
+  }, 0);
+
+  return checker === 0;
+}
+
+console.log(balancedParentheses('(())'))
+console.log(balancedParentheses('))'))
+console.log(balancedParentheses('())('))
+console.log(balancedParentheses('(('))
