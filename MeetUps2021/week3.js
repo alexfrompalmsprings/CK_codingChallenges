@@ -7,8 +7,58 @@
 // 2. Use the problem-solving framework: Understand the problem and break it up
 // into sub-problems!
 // Test data:
+
+//0      1   2
 // § Data 1: [17, 21, 23]
 // § Data 2: [12, 5, -5, 0, 4]
+
+
+
+// string with the given temperatures. Example: [17, 21, 23] will print
+
+function printForecast(arr) {
+  // do a lot of things
+  console.log(arr);
+
+  // intial empty string
+  let displayMessage = '';
+
+
+  // idea: use a for-loop
+  for (let i = 0; i < arr.length; i++) {
+    let temp = arr[i];
+
+    // adding the temperature to my string inside the loop
+    // '' or ``
+    // displayMessage += '...' + temp + 'ºC in .... '
+    displayMessage += `${temp}ºC in ${i + 1} days... `
+
+
+    console.log(displayMessage);
+
+
+
+
+  }
+
+
+
+  // this is our goal ⬇️⬇️
+  //"... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+  return displayMessage;
+}
+
+
+let tempsOne = [17, 21, 23];
+
+console.log(printForecast(tempsOne)); // [17, 21, 23];
+
+
+
+
+
+
+
 
 
 
