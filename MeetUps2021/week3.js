@@ -16,11 +16,45 @@
 
 // string with the given temperatures. Example: [17, 21, 23] will print
 
+
+/*
+O - output
+      string ----> create a variable ''
+
+
+I - input
+      input  ----> array
+
+      conditions/rules --- something that tells the user that we are only accepting arrays
+      [17, 21, 30]
+      '17, 21, 30'
+
+
+C -  constraints/conditions/ cases/ scenarios
+        -- break my code
+        -- case
+        -- condition
+
+
+E -  examples
+        ----
+
+
+        ''  + temp1 .... + '' + temp2
+*/
+
+
+
+
+// input is an array
 function printForecast(arr) {
+
+
+
   // do a lot of things
   console.log(arr);
 
-  // intial empty string
+  // initial empty string  - O
   let displayMessage = '';
 
 
@@ -33,15 +67,9 @@ function printForecast(arr) {
     // displayMessage += '...' + temp + 'ºC in .... '
     displayMessage += `${temp}ºC in ${i + 1} days... `
 
-
     console.log(displayMessage);
 
-
-
-
   }
-
-
 
   // this is our goal ⬇️⬇️
   //"... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
