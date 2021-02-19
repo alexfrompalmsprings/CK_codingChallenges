@@ -100,7 +100,12 @@ function largestOfFour(arr) {
   return result
 }
 
-largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+largestOfFour([
+  [4, 5, 1, 3],
+  [13, 27, 18, 26],
+  [32, 35, 37, 39],
+  [1000, 1001, 857, 1]
+]);
 
 
 
@@ -110,16 +115,37 @@ largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 85
 
 // This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
 function confirmEnding(str, target) {
-  let len = str.length - target.length;
-  console.log(len);
 
   let checker = str.slice(str.length - target.length);
-  console.log(checker);
+  // console.log(checker);
 
-
-
-
-  return str;
+  return checker === target;
 }
 
 confirmEnding("Bastian", "n");
+
+
+// Repeat a String Repeat a String
+// Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number. For the purpose of this challenge, do not use the built-in .repeat() method.
+function repeatStringNumTimes(str, num) {
+  // ---- simple solution
+  // let result = ;
+
+  // for(let i = num; i > 0; i--){
+  //   result+= str;
+  // }
+
+  // return result;
+
+
+  // ---- recursive solution
+  if (num < 1) {
+    return '';
+  } else if (num === 1) {
+    return str;
+  } else {
+    return str + repeatStringNumTimes(str, num - 1);
+  }
+}
+
+repeatStringNumTimes("abc", 3);
