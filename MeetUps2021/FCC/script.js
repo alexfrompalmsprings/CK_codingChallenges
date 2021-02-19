@@ -92,9 +92,34 @@ findLongestWordLength("The quick brown fox jumped over the lazy dog");
 // Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
 function largestOfFour(arr) {
 
+  // --- using the spread operator
+  let result = arr.map(array => {
+    return Math.max(...array);
+  })
 
-
-  return arr;
+  return result
 }
 
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+
+
+
+// Confirm the Ending
+// Check if a string (first argument, str) ends with the given target string (second argument, target).
+
+// This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
+function confirmEnding(str, target) {
+  let len = str.length - target.length;
+  console.log(len);
+
+  let checker = str.slice(str.length - target.length);
+  console.log(checker);
+
+
+
+
+  return str;
+}
+
+confirmEnding("Bastian", "n");
