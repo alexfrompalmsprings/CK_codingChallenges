@@ -9,3 +9,34 @@ function convertToF(celsius) {
 }
 
 console.log(convertToF(30));
+
+
+
+// Reverse a String
+// Reverse the provided string.
+// You may need to turn the string into an array before you can reverse it.
+// Your result must be a string.
+
+function reverseString(str) {
+  // ---- clean and simple
+  // let reversed = "";
+  // for(let char of str){
+  //   reversed = char+ reversed;
+  // }
+  // return reversed;
+
+
+
+  // --- reduce
+  let result = str
+    .split('')
+    .reduce((res, char) => {
+      return char + res;
+    }, [])
+
+  return result;
+
+
+}
+
+reverseString("hello");
