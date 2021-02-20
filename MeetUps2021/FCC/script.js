@@ -208,9 +208,35 @@ titleCase("I'm a little tea pot");
 
 // Slice and Splice
 // You are given two arrays and an index.
-
 // Copy each element of the first array into the second array, in order.
-
 // Begin inserting elements at index n of the second array.
-
 // Return the resulting array. The input arrays should remain the same after the function runs.
+function frankenSplice(arr1, arr2, n) {
+
+  let part1 = arr2.slice(0, n);
+  let part2 = arr2.slice(n);
+
+
+  return [...part1, ...arr1, ...part2]
+}
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+
+// Falsy Bouncer
+// Remove all falsy values from an array.
+// Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+// Hint: Try converting each value to a Boolean.
+function bouncer(arr) {
+
+  let result = arr.filter(ele => {
+    if (ele) {
+      return ele;
+    }
+  })
+
+  return result;
+
+}
+
+
+bouncer([7, "ate", "", false, 9]);
