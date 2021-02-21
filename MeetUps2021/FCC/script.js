@@ -240,3 +240,50 @@ function bouncer(arr) {
 
 
 bouncer([7, "ate", "", false, 9]);
+
+// Where do I Belong
+// Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
+
+// For example, getIndexToIns([1,2,3,4], 1.5) should return 1 because it is greater than 1 (index 0), but less than 2 (index 1).
+
+// Likewise, getIndexToIns([20,3,5], 19) should return 2 because once the array has been sorted it will look like [3,5,20] and 19 is less than 20 (index 2) and greater than 5 (index 1).
+
+function getIndexToIns(arr, num) {
+
+  // alex's code was messy af!
+  let idx;
+  let sorted = arr.sort((a, b) => a - b);
+  console.log(sorted);
+  let first = sorted[0];
+  let last = sorted[sorted.length - 1];
+
+
+  if (num > last) {
+    idx = arr.length;
+  }
+
+  if (num <= first || arr.length === 0) {
+    idx = 0;
+  }
+
+
+  for (let i = 0; i < sorted.length; i++) {
+    let ele = sorted[i];
+
+    if (ele >= num) {
+      idx = i;
+      return idx;
+    }
+  }
+
+
+  return idx;
+
+
+
+
+}
+
+getIndexToIns([40, 60], 50);
+
+
