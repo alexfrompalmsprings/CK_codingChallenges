@@ -251,33 +251,31 @@ bouncer([7, "ate", "", false, 9]);
 function getIndexToIns(arr, num) {
 
   // alex's code was messy af!
-  let idx;
-  let sorted = arr.sort((a, b) => a - b);
-  console.log(sorted);
-  let first = sorted[0];
-  let last = sorted[sorted.length - 1];
+  // let idx;
+  // let sorted = arr.sort((a, b) => a - b);
 
 
-  if (num > last) {
-    idx = arr.length;
-  }
 
-  if (num <= first || arr.length === 0) {
-    idx = 0;
-  }
+  // for (let i = 0; i < sorted.length; i++) {
+  //   let ele = sorted[i];
 
-
-  for (let i = 0; i < sorted.length; i++) {
-    let ele = sorted[i];
-
-    if (ele >= num) {
-      idx = i;
-      return idx;
-    }
-  }
+  //   if (ele >= num) {
+  //     idx = i;
+  //     return idx;
+  //   }
+  // }
 
 
-  return idx;
+  // return arr.length;
+
+
+  // clever way adding the num to an array  and look for the number
+  let sorted = [...arr];
+  sorted.push(num);
+  sorted = sorted.sort((a, b) => a - b);
+
+  return sorted.indexOf(num);
+
 
 
 
@@ -285,5 +283,39 @@ function getIndexToIns(arr, num) {
 }
 
 getIndexToIns([40, 60], 50);
+
+
+// Mutations
+// Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+
+// For example, ["hello", "Hello"], should return true because all of the letters in the second string are present in the first, ignoring case.
+
+// The arguments ["hello", "hey"] should return false because the string "hello" does not contain a "y".
+
+// Lastly, ["Alien", "line"], should return true because all of the letters in "line" are present in "Alien".
+function mutation(arr) {
+  let [first, second] = arr;
+
+  let firstLetters = {};
+
+  for (let letter of first) {
+    if (firstLetters[letter] === undefined) {
+      firstLetters[letter] = true;
+    }
+  }
+
+
+  for (let letter of second.toLowerCase()) {
+    if (firstLetters[letter] === undefined) {
+      return false;
+    }
+  }
+
+
+
+  return true;
+}
+
+mutation(["hello", "hey"]);
 
 
