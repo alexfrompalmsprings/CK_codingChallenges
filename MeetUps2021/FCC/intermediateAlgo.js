@@ -12,15 +12,17 @@ function sumAll(arr) {
 
   while (second >= first) {
     sum += first;
+
     console.log(sum);
     first++
   }
 
 
+
   return sum;
 }
 
-sumAll([1, 4]);
+// console.log(sumAll([1, 4]));
 
 
 // Diff Two Arrays
