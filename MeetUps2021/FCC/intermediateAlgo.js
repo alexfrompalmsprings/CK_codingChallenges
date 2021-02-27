@@ -83,24 +83,6 @@ function whatIsInAName(collection, source) {
   let sourceKeys = Object.keys(source);
   // console.log(sourceKeys);
 
-  // return collection.forEach(obj => {
-  //   // console.log(obj);
-
-  //   for (let key of sourceKeys) {
-  //     // console.log(obj[key], source[key]);
-
-  //     if (!obj.hasOwnProperty(key) || source[key] !== obj[key]) {
-  //       return false;
-  //     }
-  //   }
-
-  //   return true;
-  // });
-
-  // // return filtered;
-
-
-
 
   let filtered = collection.filter((obj) => {
 
@@ -152,8 +134,6 @@ console.log(whatIsInAName([{
 
 
 
-
-
 // Spinal Tap Case
 // Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
 function spinalCase(str) {
@@ -165,3 +145,40 @@ function spinalCase(str) {
 }
 
 console.log(spinalCase('This Is Spinal Tap'));
+
+
+
+
+// Pig Latin
+// Pig Latin is a way of altering English Words. The rules are as follows:
+
+// - If a word begins with a consonant, take the first consonant or consonant cluster, move it to the end of the word, and add "ay" to it.
+// - If a word begins with a vowel, just add "way" at the end.
+
+// Translate the provided string to Pig Latin. Input strings are guaranteed to be English words in all lowercase.
+function translatePigLatin(str) {
+
+  let result;
+  let vowels = 'aeiou';
+  let first = str[0];
+
+  if (!vowels.includes(first)) {
+    result = str.slice(1);
+    console.log(result);
+    result += first;
+    console.log(result);
+    result += 'way';
+    console.log(result);
+
+  }
+
+
+
+
+
+  return result;
+}
+
+console.log(translatePigLatin("consonant"));
+console.log(translatePigLatin("california"));
+console.log(translatePigLatin("algorithm"));// should return "algorithmway".
