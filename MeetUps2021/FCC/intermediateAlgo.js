@@ -333,24 +333,43 @@ function fearNotLetter(str) {
 // Check the assertion tests for examples.
 
 function uniteUnique(...arr) {
+  // // simplet solution with a result container
+  // let arrays = [...arr];
 
+  // let result = [];
+
+  // arrays.forEach(array => {
+  //   for (let i = 0; i < array.length; i++) {
+  //     let num = array[i];
+
+  //     if (!result.includes(num)) {
+  //       result.push(num);
+  //       console.log(result)
+  //     }
+  //   }
+  // })
+
+
+  // return result;
+
+
+
+
+  // let use a set
   let arrays = [...arr];
 
-  let result = [];
+  let result = new Set();
 
   arrays.forEach(array => {
     for (let i = 0; i < array.length; i++) {
       let num = array[i];
+      result.add(num);
 
-      if (!result.includes(num)) {
-        result.push(num);
-        console.log(result)
-      }
     }
   })
 
 
-  return result;
+  return [...result];
 }
 
 console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
