@@ -162,6 +162,7 @@ function translatePigLatin(str) {
   let vowels = 'aeiou';
   let first = str[0];
 
+  // first case vowels and
   if (!vowels.includes(first)) {
     result = str.slice(1);
     console.log(result);
@@ -170,15 +171,84 @@ function translatePigLatin(str) {
     result += 'way';
     console.log(result);
 
+  } else {
+    result = str;
+    result += 'way'
   }
-
-
-
-
 
   return result;
 }
 
 console.log(translatePigLatin("consonant"));
 console.log(translatePigLatin("california"));
-console.log(translatePigLatin("algorithm"));// should return "algorithmway".
+console.log(translatePigLatin("algorithm")); // should return "algorithmway".
+
+
+// Search and Replace
+// Perform a search and replace on the sentence using the arguments provided and return the new sentence.
+
+// First argument is the sentence to perform the search and replace on.
+
+// Second argument is the word that you will be replacing (before).
+
+// Third argument is what you will be replacing the second argument with (after).
+
+// Note
+// Preserve the case of the first character in the original word when you are replacing it. For example if you mean to replace the word "Book" with the word "dog", it should be replaced as "Dog"
+
+
+let upperCaseFunction = function (word) {
+  let result = '';
+
+  let first = word.toUpperCase()[0];
+  result = first + word.slice(1);
+
+  return result;
+}
+
+console.log(upperCaseFunction('alex'))
+
+
+
+
+function myReplace(str, before, after) {
+
+  // all these code checks if the words needs to be formatted to upper case
+  let upperCheckTrue;
+  let formattedWord;
+
+  let firsLetter = before[0];
+  let firsLetterUpper = before.toUpperCase()[0];
+
+  upperCheckTrue = firsLetterUpper === firsLetter ? true : false;
+  console.log(upperCheckTrue);
+
+  if (upperCheckTrue) {
+    formattedWord = upperCaseFunction(after);
+  } else {
+    formattedWord = after.toLowerCase();
+  }
+
+
+
+  // lets do the replacing
+  let result = [];
+
+  let words = str.split(' ');
+  for (let i = 0; i < words.length; i++) {
+    let currentWord = words[i];
+
+    if (currentWord === before) {
+      result.push(formattedWord);
+    } else {
+      result.push(currentWord);
+    }
+
+  }
+
+  return result.join(' ');
+
+
+}
+
+console.log(myReplace("A quick brown fox jumped over the lazy dog", "jumped", "Leaped"));
