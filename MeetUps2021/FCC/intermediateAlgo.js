@@ -107,30 +107,30 @@ function whatIsInAName(collection, source) {
 
 
 
-console.log(whatIsInAName([{
-  first: "Romeo",
-  last: "Montague"
-}, {
-  first: "Mercutio",
-  last: null
-}, {
-  first: "Tybalt",
-  last: "Capulet"
-}], {
-  last: "Capulet"
-}));
+// console.log(whatIsInAName([{
+//   first: "Romeo",
+//   last: "Montague"
+// }, {
+//   first: "Mercutio",
+//   last: null
+// }, {
+//   first: "Tybalt",
+//   last: "Capulet"
+// }], {
+//   last: "Capulet"
+// }));
 
 
-console.log(whatIsInAName([{
-  "apple": 1
-}, {
-  "apple": 1
-}, {
-  "apple": 1,
-  "bat": 2
-}], {
-  "apple": 1
-})); //should return [{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }].
+// console.log(whatIsInAName([{
+//   "apple": 1
+// }, {
+//   "apple": 1
+// }, {
+//   "apple": 1,
+//   "bat": 2
+// }], {
+//   "apple": 1
+// })); //should return [{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }].
 
 
 
@@ -144,7 +144,7 @@ function spinalCase(str) {
 
 }
 
-console.log(spinalCase('This Is Spinal Tap'));
+// console.log(spinalCase('This Is Spinal Tap'));
 
 
 
@@ -179,9 +179,9 @@ function translatePigLatin(str) {
   return result;
 }
 
-console.log(translatePigLatin("consonant"));
-console.log(translatePigLatin("california"));
-console.log(translatePigLatin("algorithm")); // should return "algorithmway".
+// console.log(translatePigLatin("consonant"));
+// console.log(translatePigLatin("california"));
+// console.log(translatePigLatin("algorithm")); // should return "algorithmway".
 
 
 // Search and Replace
@@ -206,7 +206,7 @@ let upperCaseFunction = function (word) {
   return result;
 }
 
-console.log(upperCaseFunction('alex'))
+// console.log(upperCaseFunction('alex'))
 
 
 
@@ -287,4 +287,43 @@ function pairElement(str) {
   return result;
 }
 
-console.log(pairElement("GCG"));
+// console.log(pairElement("GCG"));
+
+
+// Missing letters
+// Find the missing letter in the passed letter range and return it.
+
+// If all letters are present in the range, return undefined.
+function fearNotLetter(str) {
+  let alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+  let letters = str.split('');
+  console.log(letters);
+
+  let firsLetter = letters[0];
+  let lastLetter = letters[letters.length - 1];
+  console.log(firsLetter, lastLetter);
+
+  let startIdx = alphabet.indexOf(firsLetter)
+  let endIdx = alphabet.indexOf(lastLetter)
+  console.log(startIdx, endIdx);
+
+  let range = alphabet.slice(startIdx, (endIdx + 1)).split('');
+  console.log(range);
+
+  let filtered = range.filter(rangeLetter => {
+    if (!letters.includes(rangeLetter)) {
+      return true;
+    }
+    return false;
+  })
+
+  return filtered.length > 0 ? filtered.join('') : undefined;
+
+
+
+
+
+}
+
+// console.log(fearNotLetter("efgij"));
