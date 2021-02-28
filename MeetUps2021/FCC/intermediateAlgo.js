@@ -440,9 +440,9 @@ function sumFibs(num) {
   return result;
 }
 
-console.log(sumFibs(10));
-console.log(sumFibs(1000));
-console.log(sumFibs(75025));
+// console.log(sumFibs(10));
+// console.log(sumFibs(1000));
+// console.log(sumFibs(75025));
 
 
 
@@ -472,5 +472,32 @@ function sumPrimes(num) {
   return primes.reduce((total, prime) => total += prime, 0);
 }
 
-console.log(sumPrimes(10));
-console.log(sumPrimes(977));
+// console.log(sumPrimes(10));
+// console.log(sumPrimes(977));
+
+// Drop it
+// Given the array arr, iterate through and remove each element starting from the first element (the 0 index) until the function func returns true when the iterated element is passed through it.
+
+// Then return the rest of the array once the condition is satisfied, otherwise, arr should be returned as an empty array.
+
+
+function dropElements(arr, func) {
+
+  let findEle = arr.find((ele, idx) => {
+
+    return func(ele)
+  })
+
+  let startIdx = arr.indexOf(findEle);
+
+
+  return startIdx >= 0 ? arr.slice(startIdx) : [];
+}
+
+console.log(dropElements([1, 2, 3], function (n) {
+  return n < 3;
+}));
+
+console.log(dropElements([1, 2, 3, 4], function (n) {
+  return n > 5;
+})) // should return [].
