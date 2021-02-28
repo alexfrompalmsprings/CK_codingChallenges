@@ -415,7 +415,29 @@ function convertHTML(str) {
 
 // For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less than or equal to 10 are 1, 1, 3, and 5.
 function sumFibs(num) {
-  return num;
+
+  let fibArr = [];
+  let max = num + 1;
+
+  let a = 1, b = 0, temp;
+
+  while (num >= 0) {
+    fibArr.push(b);
+    temp = a;
+    a = a + b;
+    b = temp;
+    num--;
+  }
+
+  let result = fibArr
+    .filter(currentNum => (currentNum < max) && (currentNum % 2 !== 0))
+    .reduce((total, currentNum) => total += currentNum, 0);
+
+
+
+  return result;
 }
 
 console.log(sumFibs(10));
+console.log(sumFibs(1000));
+console.log(sumFibs(75025));
