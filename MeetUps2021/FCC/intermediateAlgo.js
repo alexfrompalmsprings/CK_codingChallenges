@@ -419,7 +419,9 @@ function sumFibs(num) {
   let fibArr = [];
   let max = num + 1;
 
-  let a = 1, b = 0, temp;
+  let a = 1,
+    b = 0,
+    temp;
 
   while (num >= 0) {
     fibArr.push(b);
@@ -441,3 +443,34 @@ function sumFibs(num) {
 console.log(sumFibs(10));
 console.log(sumFibs(1000));
 console.log(sumFibs(75025));
+
+
+
+// Sum All Primes
+// A prime number is a whole number greater than 1 with exactly two divisors: 1 and itself. For example, 2 is a prime number because it is only divisible by 1 and 2. In contrast, 4 is not prime since it is divisible by 1, 2 and 4.
+
+// Rewrite sumPrimes so it returns the sum of all prime numbers that are less than or equal to num.
+function sumPrimes(num) {
+  // algorithm to get prime numbers
+  function isPrime(num) {
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i == 0)
+        return false;
+    }
+    return true;
+  }
+
+  let primes = []
+  // loop and use the function above
+  for (let i = 2; i <= num; i++) {
+
+    if (isPrime(i)) {
+      primes.push(i);
+    }
+  }
+
+  return primes.reduce((total, prime) => total += prime, 0);
+}
+
+console.log(sumPrimes(10));
+console.log(sumPrimes(977));
